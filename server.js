@@ -9,11 +9,15 @@ app.get("/", function(req, res) {
   res.render("home");
 });
 
-app.get("/contacts", function(req,res) {
-  res.render("contacts");
-
+app.post("/addcontact", function(req,res){
+  res.send("YOU HAVE REACHED POST ROUTE");
 });
-app
-.listen(PORT, function(){
+
+app.get("/contacts", function(req,res) {
+  var contacts = ["Tony", "Tim", "Ashley", "Nick"];
+  res.render("contacts", {contacts: contacts});
+});
+
+app.listen(PORT, function(){
   console.log('App listening on PORT ' + PORT);
 })
