@@ -1,20 +1,28 @@
 var express = require("express");
+var bodyParser = require("body-parser");
+
 var app = express();
+app.use(bodyParser.urlencoded({entended: true}));
 
 app.set("view engine", "ejs");
 
 var PORT = process.env.PORT || 3333;
+
+var contacts = ["Tony", "Tim", "Ashley", "Nick"];
 
 app.get("/", function(req, res) {
   res.render("home");
 });
 
 app.post("/addcontact", function(req,res){
-  res.send("YOU HAVE REACHED POST ROUTE");
+  var newContact = req.body.newcontact;
+  contacts.push(newContact);
+  console.log(newContact);
+  res.redirect("/contacts");
 });
 
 app.get("/contacts", function(req,res) {
-  var contacts = ["Tony", "Tim", "Ashley", "Nick"];
+
   res.render("contacts", {contacts: contacts});
 });
 
