@@ -1,0 +1,23 @@
+{
+  "name": "ejsworks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amr08/EJSWorks.git"
+  },
+  "author": "AR",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amr08/EJSWorks/issues"
+  },
+  "homepage": "https://github.com/amr08/EJSWorks#readme",
+  "dependencies": {
+    "ejs": "^2.5.2",
+    "express": "^4.14.0"
+  }
+}
