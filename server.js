@@ -9,6 +9,11 @@ app.get("/", function(req, res) {
   res.render("home");
 });
 
-app.listen(PORT, function(){
+app.get("/contacts", function(req,res) {
+  res.render("contacts");
+
+});
+app
+.listen(PORT, function(){
   console.log('App listening on PORT ' + PORT);
 })
